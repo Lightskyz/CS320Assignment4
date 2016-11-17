@@ -1,4 +1,4 @@
-CS320Assignment2
+CS320Assignment4
 ======
 
 __Name__ : Antoine Rakotozafy  
@@ -33,22 +33,19 @@ Quick start
 
 * Clone the 2 repositories : 
 	* The first one with the program inside (we will work **inside this one**):  
-`git clone git@gitlab.com:AntoineRakotozafy/CS320Assignment2.git`
-
-	* The second one with the C files :  
-`git clone https://gitlab.com/smartysmartymcsmartypants/cs320assignment3`
-* Download the Grades.gz and Logins.zip files inside the repository where we will work  
+`git clone git@gitlab.com:AntoineRakotozafy/CS320Assignment4.git`
+ 
 
 Then you can find specific information below of each program on how to run them.
 
 
-Prog1_1  
+Prog4_1  
 -----
 
 This program unzip the Grades and Logins files, that we put in arguments, then extract the name of the person who has 100 at all his previous assignements. Then, the program gives us his username and his password.
 
-**To run it :**
-`./prog2_1.sh <Grade file name> <Login file name>`
+**To compile it :**
+`gcc prog4_1.c -llua -lm -ldl -I Lua-5.3.3/src -L lua-5.3.3/src`
 
 __Exemple :__  
 * If the grades is in this file : **Grades.gz**  
@@ -65,7 +62,7 @@ You may have an error, that you don't have the right to execute it :
 
 
 
-Prog1_2
+Prog4_2
 -----  
 This program allows us to search inside the Smarty's messy directory and find all the C files inside it then copy all of them in the currect directory then add the extension "*.c" to this files. It takes just the path of Smarty's directory as an argument.
 
@@ -78,7 +75,7 @@ You may have an error, that you don't have the right to execute it :
 **To give the right to the prog to execute it:**
 `chmod +x prog2_2.sh`
 
-Prog1_3
+Prog4_3
 -----  
 
 This program allows us to link which C files, we just copy is which assignment compared to instructions. 
@@ -93,7 +90,7 @@ You may have an error, that you don't have the right to execute it :
 **To give the right to the prog to execute it:**
 `chmod +x prog2_3.sh`
 
-Prog1_4
+Prog4_4
 -----  
 
 This program allows to add my name to a specific C file. It takes the name of the file where we want to add the name and the name we want to add.
