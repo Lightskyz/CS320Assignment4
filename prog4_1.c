@@ -1,7 +1,6 @@
 #include <lua.h>                                /* Always include this when calling Lua */
 #include <lauxlib.h>                            /* Always include this when calling Lua */
 #include <lualib.h>                             /* Always include this when calling Lua */
-
 #include <stdlib.h>                             /* For function exit() */
 #include <stdio.h>   
 
@@ -20,11 +19,11 @@ int main(int argc, char *argv[])
 
     printf("Assignment #4-1, Antoine Rakotozafy, antoine.rakotozafy@gmail.com \n");
 
-    if (luaL_loadfile(L, argv[1]))    /* Load but don't run the Lua script */
-	bail(L, "luaL_loadfile() failed");      /* Error out if file can't be read */
+    if (luaL_loadfile(L, argv[1]))              /* Load but don't run the Lua script put in argument */
+	   bail(L, "luaL_loadfile() failed");      /* Error out if file can't be read */
 
-    if (lua_pcall(L, 0, 0, 0))                  /* Run the loaded Lua script */
-	bail(L, "lua_pcall() failed");          /* Error out if Lua file has an error */
+    if (lua_pcall(L, 0, 0, 0))                  /* Run the loaded Lua script put in the argument */
+	   bail(L, "lua_pcall() failed");          /* Error out if Lua file has an error */
 
     lua_close(L);                               /* Clean up, free the Lua state var */
 
