@@ -11,8 +11,6 @@ Table of contents
 * [Prog1_1](#prog1_1)
 * [Prog1_2](#prog1_2)
 * [Prog1_3](#prog1_3)
-* [Prog1_4](#prog1_4)
-
 Prerequisites  
 -----
 * **GIT**
@@ -35,6 +33,7 @@ Quick start
 	* The first one with the program inside (we will work **inside this one**):  
 `git clone git@gitlab.com:AntoineRakotozafy/CS320Assignment4.git`
  
+ * We suppose that for compiling of prog4_1.c the library folder (lua-5.3.3) is in the assignment directory. 
 
 Then you can find specific information below of each program on how to run them.
 
@@ -42,71 +41,38 @@ Then you can find specific information below of each program on how to run them.
 Prog4_1  
 -----
 
-This program unzip the Grades and Logins files, that we put in arguments, then extract the name of the person who has 100 at all his previous assignements. Then, the program gives us his username and his password.
+This program is a Lua interpreter written in C. It allows to interpret Lua code.
 
 **To compile it :**
-`gcc prog4_1.c -llua -lm -ldl -I Lua-5.3.3/src -L lua-5.3.3/src`
-
-__Exemple :__  
-* If the grades is in this file : **Grades.gz**  
-* If the login is in this file : **Logins.zip**
+`gcc prog4_1.c -llua -lm -ldl -I Lua-5.3.3/src -L lua-5.3.3/src` 
 
 Then **to run it : **
-`./prog2_1.sh Grades.gz Logins.zip`
+`./a.out test.lua`
 
-
-You may have an error, that you don't have the right to execute it :  
-  
-**To give the right to the prog to execute it:**
-`chmod +x prog2_1.sh`
-
-
+It must print 'Hello'.
 
 Prog4_2
 -----  
-This program allows us to search inside the Smarty's messy directory and find all the C files inside it then copy all of them in the currect directory then add the extension "*.c" to this files. It takes just the path of Smarty's directory as an argument.
-
+This program writes in lua will execute Fizzbuss from 1 to 100. To execute it, we will use the interpreter we just develop in C before.
 
 **To run it :**
-`./prog2_2.sh </path/to/smarty/directory>`
-
-You may have an error, that you don't have the right to execute it :  
-  
-**To give the right to the prog to execute it:**
-`chmod +x prog2_2.sh`
+`./a.out prog4_2.lua`
+ 
+It must print the same content as **correct.output**
 
 Prog4_3
 -----  
 
-This program allows us to link which C files, we just copy is which assignment compared to instructions. 
-It takes all the name programs in arguments.
+This program allows us to automate the task we just did, that is to say, compile the interpreter then execute the Fizzbuzz write in Lua and then compare the output if it's the same as correct.output. If it is, it'll print "Passed Test" otherwise it should print "Failed Test"
 
 **To run it :**
-`./prog2_3.sh <prog1.c> <prog2.c> <prog3.c> <prog4.c>`
+`./prog4_3.sh <lua.script> <The correct file to compare>`
 
+The lua script should be : prog4_2.lua 
+The correct file should be : correct.output
 
 You may have an error, that you don't have the right to execute it :  
   
 **To give the right to the prog to execute it:**
-`chmod +x prog2_3.sh`
-
-Prog4_4
------  
-
-This program allows to add my name to a specific C file. It takes the name of the file where we want to add the name and the name we want to add.
-
-**To run it :**
-`./prog2_4.sh <C file to modify> <Name>`
-
-**For exemple :**  
-* If the C file is : `test.c`  
-* If my name is : `John Doe`
-
-Then to **run it :** `./prog2_4.sh test.c "John Doe"`
- 
-
-You may have an error, that you don't have the right to execute it :  
-  
-**To give the right to the prog to execute it:**
-`chmod +x prog2_4.sh`
+`chmod +x prog4_3.sh`
 
