@@ -53,7 +53,7 @@ It must print 'Hello'.
 
 Prog4_2
 -----  
-This program writes in lua will execute Fizzbuss from 1 to 100. To execute it, we will use the interpreter we just develop in C before.
+This program writes in lua will execute Fizzbuzz from 1 to 100. To execute it, we will use the interpreter we just develop in C before.
 
 **To run it :**
 `./a.out prog4_2.lua`
